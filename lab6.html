@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Responsive Menu Lab</title>
+<style type="text/css">
+#header
+{
+margin: 5px;
+font-size:2em;
+background-color: PINK;
+text-align:center
+
+}
+#container
+{
+width: 98%;
+margin: auto;
+}
+#menu
+{
+padding: 10px;
+text-align:center
+}
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  background-color: white; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  /* color: #ffffff; */
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: pink;
+   text-align: center;
+}
+</style>
+
+</head>
+<body>
+<div id="header">Go Go Go</div>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a> .
+    <a href="#">Who are we</a> .
+    <a href="#">Services</a> .
+    <a href="#">Contact</a> .
+    <a href="#">Blog</a> .
+    <a href="#">EXplore</a>
+</div>
+
+<center><span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Click to Open Menu</span></center>
+<div id="main">
+    <p>Top and left navigations are typical on large screens, but lack of screen real estate on small screens makes for an interesting challenge. As responsive design becomes more popular, it’s worth looking at the various ways of handling navigation for small screen sizes. Mobile web navigation must strike a balance between quick access to a site’s information and unobtrusiveness.</p>
+
+    <div style="height: 400px; border-width: 0">.</div>
+
+    <p>There are of course advantages and disadvantages of each method and definitely some things to look out for when choosing what method’s right for your project. One of the easiest-to-implement solutions for navigation is to simply keep it at the top. Because of its ease of implementation, it’s found on many (maybe even most) responsive sites right now.</p>
+</div>
+
+<div class="footer">
+    <p>Footer</p>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+
+</body>
+</html>

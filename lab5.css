@@ -1,0 +1,59 @@
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px 0px;
+    grid-template-areas:
+      "first first second second"
+      "first first third third"
+      ". . . .";
+  }
+  .first { 
+      text-align: center;
+      grid-area: first;
+     background-color: greenyellow;
+    }
+  .second {
+      text-align: center;
+       grid-area: second;
+        background-color: blue; 
+    }
+  .third { 
+      text-align: center;
+      grid-area: third;
+       background-color: pink; 
+    }
+
+    @media only screen and (max-width: 480px) {
+       .grid-container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 30px 0px;
+            grid-template-areas:
+              "first first first first"
+              "second second third third"
+              ". . . .";
+          }
+
+    }
+
+
+    @media only screen and (max-width: 768px) {
+        .grid-container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 30px 0px;
+            grid-template-areas:
+              "first first"
+              "second second"
+              "third third";
+          }
+
+
+    }
