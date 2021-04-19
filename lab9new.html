@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexA5.css">
+    <title>New Lab9</title>
+</head>
+<body>
+    <div class="container">
+        <form action="action_page.php">
+            <div class="row">
+                <div class="col-25">
+                    <h2>Student Profile</h2>
+                </div>
+            </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <!-- <label for="lname">Last Name</label> -->
+              <label>Education level</label>
+                
+            </div>
+            <div class="col-75">
+                <td><input type="radio" name="education" value="high school" />
+                    High school 
+                <input type="radio" name="education" value="college" checked="checked"/>
+                    College 
+                <input type="radio" name="education" value="graduate" />
+                    Graduate</td>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+                <label>Check if true</label>
+            </div>
+            <div class="col-75">
+              <td>
+                  <input type="checkbox" name="havePC" value="Yes" />
+                Yes, I have a computer</td>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-25">
+                    <label>Skills</label>
+              </div>
+              <div class="col-75">
+            
+                    <input name="skill[]" type="checkbox" value="html" />
+                    HTML 
+                    <input name="skill[]" type="checkbox" value="java" />
+                    Java 
+                    <br />
+                    <input name="skill[]" type="checkbox" value="javascript" checked="checked"/>
+                    JavaScript 
+                    <input name="skill[]" type="checkbox" value="php" />
+                    PHP 
+                    <br />
+                    <input name="skill[]" type="checkbox" value="dotnet" />
+                    .Net 
+                    <input name="skill[]" type="checkbox" value="sql" />
+                    SQL
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Home Location</label>
+            </div>
+            <div class="col-75">
+             <select id="country" name="country">
+                <option value="australia">Georgia</option>
+                <option value="canada">Washington</option>
+                <option value="usa">California</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-25">
+                  <label for="majors">Majors</label>
+              </div>
+              <div class="col-75">
+                <td><select name="major[]" size="5" id="major" multiple="multiple">
+                    <option value="Accounting">Accounting</option>
+                    <option value="Finance">Finance</option>
+                    <option value="CIS">Information Systems</option>
+                    <option value="IT" selected="selected">Information Tech</option>
+                  </select></td>
+               </div>
+               
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+</body>
+</html>
